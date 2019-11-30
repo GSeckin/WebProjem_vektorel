@@ -1,0 +1,21 @@
+{% extends 'GorkemContact/base.html' %}
+{% block content %}
+
+
+   
+<!-- top bar -->
+    <div class="top-bar">
+        <h1>Gönderi Düzenleme</h1>
+        <p><a href="#">Anasayfa</a> / Blog</p>
+    </div>
+    <!-- end top bar -->
+    <div class="container main-container"></div>
+    
+        <h1>Yeni Gönderi</h1>
+        <form method="POST" class="post-form">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn btn-default">Kaydet</button>
+        </form>
+
+{% endblock %}
+ 

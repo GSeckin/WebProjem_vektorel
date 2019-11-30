@@ -4,11 +4,11 @@
     <!-- top bar -->
     <div class="top-bar">
         <h1>Blog</h1>
-        <p><a href="#">Home</a> / Blog</p>
+        <p><a href="#">Anasayfa</a> / Blog</p>
     </div>
     <!-- end top bar -->
     <div class="container main-container"></div>
-
+    <a href="{% url 'yeni_gonderi' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
         {% for gonderi in Gonderis %}
         <div>
             <p>{{ gonderi.yayim_zaman }}</p>
