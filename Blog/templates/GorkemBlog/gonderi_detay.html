@@ -1,27 +1,27 @@
 {% extends 'GorkemContact/base.html' %}
 {% block content %}
 
-    <!-- top bar -->
-    <div class="top-bar">
-        <h1>Blog</h1>
-        <p><a href="#">Home</a> / Blog</p>
-    </div>
-    <!-- end top bar -->
-    <div class="container main-container"></div>
 
-        
+<div class="page" id="p1">
+        <li class="icon fa fa-home"><span class="title">Blog Gönderi Detay</span>
+ 
         <div>
-            {% if gonderi.yayim_zaman %}
-                <p>{{ gonderi.yayim_zaman }}</p>
-            {% endif %}
-
             <h2>
                 <a href="">{{ gonderi.baslik }}</a>
             </h2>
             <p>{{ gonderi.yazi }}</p>
+
+             {% if gonderi.yayim_zaman %}
+                <p>{{ gonderi.yayim_zaman }}</p>
+            {% endif %}           
         </div>
-     
+
+        <div class="primary-button">
+                <a href="{% url 'gonderi_liste' %}">Blog'a Dön</a>
+        </div></li>  
+</div>
         
   
   
 {% endblock %}
+ 

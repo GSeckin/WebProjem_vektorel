@@ -1,61 +1,52 @@
 {% extends 'GorkemContact/base.html' %}
 {% block content %}
 
-    <!-- top bar -->
-    <div class="top-bar">
-        <h1>contact Me</h1>
-        <p><a href="#">Home</a> / Contact Me</p>
-    </div>
-    <!-- end top bar -->
-
-    <!-- main-container -->
-    <div class="container main-container">
-        <div class="col-md-6">
-            <form action="#" method="post">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="input-contact">
-                            <input type="text" name="name">
-                            <span>your name</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="input-contact">
-                            <input type="text" name="email">
-                            <span>your email</span>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="input-contact">
-                            <input type="text" name="object">
-                            <span>object</span>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="textarea-contact">
-                            <textarea name="message"></textarea>
-                            <span>message</span>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <a href="#" class="btn btn-box">Send</a>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <div class="col-md-6">
-            <h3 class="text-uppercase">contact me</h3>
-            <h5>Creative & Lorem ipsum dolor sit amet</h5>
-            <div class="h-30"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliter enim nosmet ipsos nosse non possumus. Inscite autem medicinae et gubernationis ultimum cum ultimo sapientiae comparatur. Tecum optime, deinde etiam cum mediocri amico. Et nemo nimium beatus est; Ac ne plura complectar-sunt enim innumerabilia-, bene laudata virtus voluptatis aditus </p>
-            <div class="contact-info">
-                <p><i class="ion-android-call"></i> 0100 787 3456</p>
-                <p><i class="ion-ios-email"></i> box@info.com</p>
-            </div>
-        </div>
-
-    </div>
-    <!-- end main-container -->
-
+<div class="page" id="p1">
+        <li class="icon fa fa-phone"><span class="title"><h4>İletişim</h4></span>
+         <div class="container">
+           <div class="row">
+             <div class="col-md-6">
+                <form id="contact" action="" method="post">
+                   <div class="col-md-12">
+                     <fieldset>
+                       <input name="name" type="text" class="form-control" id="name" placeholder="Vektörel" required>
+                     </fieldset>
+                   </div>
+                   <div class="col-md-12">
+                     <fieldset>
+                       <input name="email" type="email" class="form-control" id="email" placeholder="Bilişim" required>
+                     </fieldset>
+                   </div>
+                   <div class="col-md-12">
+                     <fieldset>
+                       <textarea name="message" rows="6" class="form-control" id="message" placeholder="'i' ve 'ö' gibi bazı harfler, bazı başlıklarda çıkmıyor. Özür dileriz." required></textarea>
+                     </fieldset>
+                   </div>
+                   <div class="col-md-12">
+                     <fieldset>
+                       <button type="submit" id="form-submit" class="btn">Yolla</button>
+                     </fieldset>
+                   </div>
+                 </form>
+              </div>
+              <div class="col-md-6">
+                <div class="right-info">
+                   <p>Bu cümle, python programlama Webprojesinin "İletişim" sayfasındaki ilk cümle.<br><br>
+                   <em>Bu cümle ise<br>
+                     iki satır sürüyor. <br>
+                     Bu da son cümle.<br></em></p>
+                   <ol class="social-icons">
+                     <i><a href="#"><i class="fa fa-facebook"></i></a></i>
+                     <i><a href="#"><i class="fa fa-twitter"></i></a></i>
+                     <i><a href="#"><i class="fa fa-linkedin"></i></a></i>
+                     <i><a href="#"><i class="fa fa-rss"></i></a></i>
+                     <i><a href="#"><i class="fa fa-behance"></i></a></i>
+                   </ol>
+                 </div>
+              </div>
+           </div>
+         </div>
+        </li>
+</div>  
+       
     {% endblock %}
