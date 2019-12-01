@@ -1,0 +1,38 @@
+{% extends 'GorkemContact/base.html' %}
+
+{% block content %}
+<div class="page" id="p1">
+        <li class="icon fa fa-address-card"><span class="title"><h4>Login</h4></span>
+
+            <p>.</p><p>.</p>
+
+            {% if user.is_authenticated %}
+
+            <h2>!!! Dikkat !!!</h2>
+            <h2>Zaten   " {{ user.username }} "   olarak giriş yapmış bulunuyorsunuz</h2>
+            <h2>Eğer bu siz değilseniz, önce aşağıdaki linki takip ederek çıkış yapın. </h2>
+            <div class="primary-button"><a href="{% url 'usergreeting' %}">Çıkış Yapmak İçin Bu Linki Takip Edin</a></div><p>.</p><p>.</p><p>.</p>
+
+
+            {% else %}
+            <h2>Eğer zaten üyeysen, kullanıcı adını ve şifreni yaz</h2>
+            <h2>ve aşağıdaki butona tıklayarak</h2>
+            <h2>Giriş Yap!</h2>
+            <p>.</p>
+            <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <p>.</p>
+            <p>.</p>
+            <button type="submit">Giriş Yap</button>
+            </form>
+            <p>.</p>
+            <p>.</p>
+            <p>.</p>
+            <p>.</p>
+            <p>.</p>
+            {% endif %}
+
+        </li>   
+</div>
+{% endblock %}

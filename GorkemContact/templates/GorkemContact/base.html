@@ -40,8 +40,10 @@ http://www.tooplate.com/view/2090-kinetic
                 <section>  
                  <ul>
                    <a href="{% url 'ana_sayfa' %}"><li class="icon fa fa-home" id="uno"></li></a>
-                   <a href="{% url 'gonderi_liste' %}"><li class="icon fa fa-user" id="dos"></li></a>
-                   <a href="#t3"><li class="icon fa fa-image" id="tres"></li></a>
+                   <a href="{% url 'gonderi_liste' %}"><li class="icon fa fa-folder-open" id="dos"></li></a>
+                   <a href="{% url 'login' %}"><li class="icon fa fa-address-card" id="tres"></li></a>
+                   <a href="{% url 'signup' %}"><li class="icon fa fa-user-plus" id="tres"></li></a>
+                   <a href="{% url 'usergreeting' %}"><li class="icon fa fa-search" id="tres"></li></a>
                    <a href="{% url 'contact' %}"><li class="icon fa fa-phone" id="cuatro"></li></a>
                  </ul>
                  {% block content %}

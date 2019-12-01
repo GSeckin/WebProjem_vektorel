@@ -1,0 +1,35 @@
+{% extends 'GorkemContact/base.html' %}
+
+{% block content %}
+<div class="page" id="p1">
+        <li class="icon fa fa-search"><span class="title"><h4>Üye Ekranı</h4></span>
+
+            <p>.</p><p>.</p><p>.</p>
+
+            {% if user.is_authenticated %}
+            Merhaba {{ user.username }}!
+
+            <p>.</p>
+            <h2>Çıkış yapmak istiyorsan,</h2>
+            <h2>aşağıdaki butona tıkla</h2>
+            <div class="primary-button"><a href="{% url 'logout' %}">Çıkış</a></div><p>.</p><p>.</p><p>.</p>
+
+
+            {% else %}
+            <h2>Giriş yapmadınız.</h2>
+            <h2>Giriş yapmak için aşağıdaki butona tıklayın.</h2>
+
+            <div class="primary-button"><a href="{% url 'login' %}">Giriş Yap!</a></div>
+            <p>.</p>
+
+            <h2>Eğer üye değilseniz,</h2>
+            <h2>kayıt olmak için aşağıdaki butona tıklayın.</h2>
+
+            <div class="primary-button"><a href="{% url 'signup' %}">Kayıt Ol!</a></div>
+            <p>.</p><p>.</p><p>.</p><p>.</p>
+
+            {% endif %}
+
+        </li>   
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'GorkemContact/base.html' %}
+
+{% block content %}
+<div class="page" id="p1">
+        <li class="icon fa fa-user-plus"><span class="title"><h4>Kayıt Ol</h4></span>
+
+            <p>.</p><p>.</p>
+
+            <h2>Eğer üye değilsen, </h2>
+            <h2>kullanıcı adı ve şifre seçerek üye ol!</h2>
+            <p>.</p>
+            <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <p>.</p>
+            <p>.</p>
+            <button type="submit">Üye Ol</button>
+            </form>
+            <p>.</p>
+            <p>.</p>
+            <p>.</p>
+            <p>.</p>
+            <p>.</p>
+
+        </li>   
+</div>
+{% endblock %}
